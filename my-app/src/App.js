@@ -1,25 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import UNPhoto from './components/UNPhoto/UNPhoto';
+import Calendar from './components/Calendar/Calendar';
+import Broadcast from './components/Broadcast/Broadcast';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="un-column-wrapper">
+      <UNPhoto />
+      <div className="row">
+        <Broadcast />
+        <Calendar />
+      </div>
     </div>
   );
 }
+
 
 export default App;

@@ -1,0 +1,45 @@
+/* src/components/UNPhoto/UNPhoto.css */
+.unphoto-container {
+    position: relative;              /* ✅ This makes .arrow’s absolute position work */
+    width: 200px;
+    height: 200px;
+    padding: 32px 16px;
+    box-sizing: border-box;
+    background-color: #4a90e2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .unphoto-title {
+    font-size: 36px;               /* larger text */
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.1;
+  }
+  
+  .unphoto-title span {
+    display: block;                /* stack “UN” above “Photo” */
+  }
+  
+  .unphoto-arrow {
+  position: absolute;
+  bottom: 16px;  
+  left: 16px;    
+  width: calc(100% - 32px);  
+  border-bottom: 2px solid #fff;  /* long shaft */
+}
+
+.unphoto-arrow::after {
+  content: '';
+  position: absolute;
+  left: 0;                      
+  top: 50%;
+  transform: translateY(-50%) rotate(135deg); /* arrowhead pointing left */
+  border: solid #fff;
+  border-width: 0 2px 2px 0;    /* only right + bottom borders drawn */
+  padding: 6px;                 /* size of the head */
+}
